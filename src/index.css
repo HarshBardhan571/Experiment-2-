@@ -10,6 +10,16 @@ body{
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   background: linear-gradient(180deg, var(--bg), #ffffff 60%);
   color: #222;
+  /* colorful animated radial gradient overlay for a lively background */
+  background-image: radial-gradient(circle at 10% 20%, rgba(255,236,210,0.9) 0%, rgba(252,182,159,0.9) 20%, rgba(255,126,179,0.9) 40%, rgba(122,255,252,0.9) 100%), linear-gradient(180deg, var(--bg), #ffffff 60%);
+  background-size: 200% 200%, auto;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%, 0 0; }
+  50% { background-position: 100% 50%, 0 0; }
+  100% { background-position: 0% 50%, 0 0; }
 }
 
 .hero {
